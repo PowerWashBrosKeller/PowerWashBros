@@ -1,0 +1,187 @@
+<!--
+Single-file, free website. No external assets, no attachments, no payments.
+Save this as index.html and host on GitHub Pages or any static host.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PowerWash Bros — Professional Pressure Washing</title>
+  <meta name="description" content="PowerWash Bros - Local pressure washing in Keller, TX. Driveways, decks, fences, commercial cleaning." />
+  <style>
+    :root{--accent:#0b5cff;--bg:#f7f9fc;--card:#ffffff;--muted:#6b7280;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial}
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:#0f1724;line-height:1.45;font-family:var(--font, Arial, sans-serif)}
+    .container{max-width:980px;margin:28px auto;padding:20px}
+    header{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo-img{width:64px;height:64px;border-radius:8px;object-fit:cover}
+    nav a{margin-left:14px;text-decoration:none;color:var(--muted)}
+    .hero{display:grid;grid-template-columns:1fr;gap:20px;align-items:center;margin-top:22px}
+    .hero-card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(11,92,255,0.06)}
+    h1{margin:0 0 8px 0;font-size:28px}
+    p.lead{margin:0;color:var(--muted)}
+    .cta{display:inline-block;margin-top:12px;padding:10px 16px;border-radius:10px;background:var(--accent);color:white;text-decoration:none}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px}
+    .card{background:var(--card);padding:14px;border-radius:10px;box-shadow:0 6px 16px rgba(15,23,36,0.04)}
+    h3{margin:6px 0}
+    .muted{color:var(--muted);font-size:14px}
+    footer{margin-top:26px;padding:14px;text-align:center;color:var(--muted);font-size:13px}
+    .contact{display:flex;flex-direction:column;gap:8px}
+    .small{font-size:13px}
+    /* responsive */
+    @media(min-width:760px){
+      .hero{grid-template-columns:1fr 360px}
+      h1{font-size:32px}
+    }
+    /* gallery */
+    .gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+    .gallery img{width:100%;border-radius:10px;box-shadow:0 4px 14px rgba(0,0,0,0.08);object-fit:cover}
+    .gallery-caption{text-align:center;font-size:13px;color:var(--muted);margin-top:4px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <img src="logo.png" alt="PowerWash Bros Logo" class="logo-img" />
+        <div>
+          <div style="font-weight:700">PowerWash Bros</div>
+          <div class="muted small">Keller, Texas — Professional Pressure Washing</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Fast, Reliable Pressure Washing — Residential & Commercial</h1>
+        <p class="lead">We clean driveways, patios, decks, fences, sidewalks, and commercial fleets. Locally owned in Keller, TX. Free estimates.</p>
+        <a class="cta" href="#contact">Request a Free Quote</a>
+
+        <div class="grid" style="margin-top:16px">
+          <div class="card">
+            <h3>Residential</h3>
+            <div class="muted">Driveways, sidewalks, decks, fences — oil, grime, mildew removal.</div>
+          </div>
+          <div class="card">
+            <h3>Commercial</h3>
+            <div class="muted">Storefronts, parking lots, fleet washing, HOA services.</div>
+          </div>
+          <div class="card">
+            <h3>Specialty</h3>
+            <div class="muted">Soft wash for delicate surfaces, eco-friendly cleaning available.</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card">
+        <div style="font-weight:700">Get Started</div>
+        <div class="muted small">Call or email for the quickest response:</div>
+        <div style="margin-top:8px;font-size:18px;font-weight:700">(817) 408-0108</div>
+        <div style="margin-top:6px" class="muted">jerryhayford1986@gmail.com</div>
+        <div style="margin-top:12px">
+          <a href="#contact" class="cta" style="display:inline-block">Message Us</a>
+        </div>
+      </aside>
+    </section>
+
+    <section id="about" style="margin-top:20px">
+      <div class="card">
+        <h2 style="margin-top:0">About PowerWash Bros</h2>
+        <p class="muted">We are a small, insured team providing professional pressure washing to homeowners and businesses in Keller and nearby areas. Established LLC. Licensed operators, modern equipment, and customer-first service.</p>
+      </div>
+    </section>
+
+    <section id="services" style="margin-top:18px">
+      <h2 style="margin-bottom:8px">Services at a glance</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Driveway & Sidewalk Cleaning</h3>
+          <div class="muted">Remove oil stains, gum, and slick algae.</div>
+        </div>
+        <div class="card">
+          <h3>Deck & Fence Cleaning</h3>
+          <div class="muted">Prep for stain or paint with soft wash and brightening.</div>
+        </div>
+        <div class="card">
+          <h3>Fleet & Commercial</h3>
+          <div class="muted">Truck and equipment washing, storefronts, parking areas.</div>
+        </div>
+        <div class="card">
+          <h3>Gutter Cleaning</h3>
+          <div class="muted">Debris removal and basic downspout checks.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" style="margin-top:18px">
+      <div class="card">
+        <h2 style="margin-top:0">Before & After Gallery</h2>
+        <div class="gallery">
+          <div>
+            <img src="Apartment-w-qr-code-NEW.PNG" alt="Apartment Cleaning Before" />
+            <div class="gallery-caption">Apartment Cleaning — Before</div>
+          </div>
+          <div>
+            <img src="Box-Truck-Cleaning-FedEx-UPS.PNG" alt="Fleet Cleaning After" />
+            <div class="gallery-caption">Fleet Cleaning — After</div>
+          </div>
+          <div>
+            <img src="PowerWash-Bros-Flier.PNG" alt="Flyer Showcase" />
+            <div class="gallery-caption">PowerWash Bros Flyer</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:18px">
+      <div class="card">
+        <h2 style="margin-top:0">Contact & Free Quote</h2>
+        <div class="contact">
+          <label class="small">Your name</label>
+          <input id="name" placeholder="Full name" />
+          <label class="small">Email</label>
+          <input id="email" placeholder="you@example.com" />
+          <label class="small">Phone</label>
+          <input id="phone" placeholder="(###) ###-####" />
+          <label class="small">Message / Service details</label>
+          <textarea id="message" rows="4" placeholder="Address, services needed, preferred time"></textarea>
+
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
+            <button id="sendBtn">Send via Email</button>
+            <a href="tel:+18174080108" style="text-decoration:none"><button type="button">Call Now</button></a>
+          </div>
+          <div id="note" class="muted small">Note: This page uses a mailto: link to open your email client. No server, no attachments saved, and no payments required to use the site.</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      &copy; <span id="year"></span> PowerWash Bros — Keller, TX. This single-file site is free to use and host publicly with GitHub Pages or any static host.
+    </footer>
+  </div>
+
+  <script>
+    // small behavior: build mailto from form
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('sendBtn').addEventListener('click', function(){
+      var name = encodeURIComponent(document.getElementById('name').value || '');
+      var email = encodeURIComponent(document.getElementById('email').value || '');
+      var phone = encodeURIComponent(document.getElementById('phone').value || '');
+      var message = encodeURIComponent(document.getElementById('message').value || '');
+      var subject = encodeURIComponent('Quote request from ' + (name || 'website visitor'));
+      var body = encodeURIComponent('Name: ' + (name || '') + '\nEmail: ' + (email || '') + '\nPhone: ' + (phone || '') + '\n\nMessage:\n' + (message || ''));
+      var mailto = 'mailto:jerryhayford1986@gmail.com?subject=' + subject + '&body=' + body;
+      window.location.href = mailto;
+    });
+  </script>
+</body>
+</html>
