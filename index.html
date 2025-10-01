@@ -1,160 +1,251 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PowerWash Bros</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BizSnap Showcase</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        /* REPLACE THIS URL WITH YOUR GOOGLE BUSINESS COVER PHOTO */
+                        url('YOUR_GOOGLE_BUSINESS_COVER_PHOTO_URL') no-repeat center center;
+            background-size: cover;
+        }
+        .gallery-item {
+            transition: all 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
-<body class="bg-gray-50 font-sans leading-relaxed tracking-wide">
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <i data-feather="camera" class="text-blue-600"></i>
+                    <span class="font-bold text-xl text-gray-800">BizSnap</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-blue-600 font-medium">Home</a>
+                    <a href="#gallery" class="text-gray-600 hover:text-blue-600">Gallery</a>
+                    <a href="#about" class="text-gray-600 hover:text-blue-600">About</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600">Contact</a>
+                </div>
+                <button class="md:hidden focus:outline-none" id="menu-btn">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
 
-  <!-- Header -->
-  <header class="bg-white shadow">
-    <div class="container mx-auto flex justify-between items-center p-4">
-      <img src="images/logo.png" alt="PowerWash Bros Logo" class="h-16 mr-2">
-      <nav class="space-x-6 text-gray-700 font-semibold">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <!-- Mobile Menu -->
+    <div class="hidden bg-white w-full py-4 px-4 shadow-md" id="mobile-menu">
+        <div class="flex flex-col space-y-3">
+            <a href="#" class="text-blue-600 font-medium">Home</a>
+            <a href="#gallery" class="text-gray-600 hover:text-blue-600">Gallery</a>
+            <a href="#about" class="text-gray-600 hover:text-blue-600">About</a>
+            <a href="#contact" class="text-gray-600 hover:text-blue-600">Contact</a>
+        </div>
     </div>
-  </header>
 
-  <!-- Hero -->
-  <section class="relative h-screen flex items-center justify-center text-center text-white bg-cover bg-center"
-           style="background-image: url('images/hero-before-after.jpg');">
-    <div class="bg-black bg-opacity-50 p-6 rounded-xl">
-      <h1 class="text-4xl md:text-6xl font-bold mb-4">Restore the Beauty of Your Home</h1>
-      <p class="text-lg md:text-2xl mb-6">Professional Power Washing Services in Keller, TX</p>
-      <a href="#contact" class="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 rounded-lg font-semibold">
-        Get a Free Quote
-      </a>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section class="hero-section text-white h-96 flex items-center justify-center">
+        <div class="text-center px-4">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Welcome to Our Business</h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Showcasing our work through images from our Google Business profile</p>
+            <a href="#gallery" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition">View Gallery</a>
+        </div>
+    </section>
 
-  <!-- About Us -->
-  <section id="about" class="container mx-auto py-16 px-6 text-center">
-    <h2 class="text-3xl font-bold mb-6">About Us</h2>
-    <div class="flex flex-col md:flex-row items-center gap-8">
-      <div class="md:w-1/2">
-        <p class="text-gray-700 mb-4">
-          PowerWash Bros is a family-owned and locally operated business in Keller, TX.
-          We take pride in restoring the look of homes and businesses with our reliable and professional power washing services.
-        </p>
-      </div>
-      <div class="md:w-1/2">
-        <img src="images/about-team.jpg" alt="PowerWash Bros Team" class="rounded-lg shadow-xl w-full h-auto">
-      </div>
-    </div>
-  </section>
+    <!-- Featured Gallery -->
+    <section id="gallery" class="py-16 px-4 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Gallery</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Replace these divs with your Google Business photos -->
+            <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-md">
+                <!-- REPLACE WITH YOUR GOOGLE BUSINESS PHOTO -->
+                <img src="YOUR_GOOGLE_BUSINESS_PHOTO_URL_1" alt="Business Photo 1" class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg">Photo Title 1</h3>
+                    <p class="text-gray-600">Short description of this photo</p>
+                </div>
+            </div>
+            <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-md">
+                <!-- REPLACE WITH YOUR GOOGLE BUSINESS PHOTO -->
+                <img src="YOUR_GOOGLE_BUSINESS_PHOTO_URL_2" alt="Business Photo 2" class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg">Photo Title 2</h3>
+                    <p class="text-gray-600">Short description of this photo</p>
+                </div>
+            </div>
+            <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-md">
+                <!-- REPLACE WITH YOUR GOOGLE BUSINESS PHOTO -->
+                <img src="YOUR_GOOGLE_BUSINESS_PHOTO_URL_3" alt="Business Photo 3" class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg">Photo Title 3</h3>
+                    <p class="text-gray-600">Short description of this photo</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-12">
+            <a href="#" class="inline-flex items-center text-blue-600 font-medium">
+                View More Photos
+                <i data-feather="arrow-right" class="ml-2"></i>
+            </a>
+        </div>
+    </section>
 
-  <!-- Services -->
-  <section id="services" class="bg-gray-100 py-16 px-6">
-    <div class="container mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-10">Our Services</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- About Section -->
+    <section id="about" class="bg-gray-100 py-16 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">About Our Business</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <!-- REPLACE WITH YOUR GOOGLE BUSINESS ABOUT PHOTO -->
+                    <img src="YOUR_GOOGLE_BUSINESS_ABOUT_PHOTO_URL" alt="About Our Business" class="rounded-lg shadow-md w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <p class="text-gray-700 mb-4">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <p class="text-gray-700 mb-4">
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <div class="flex items-center space-x-4 mt-6">
+                        <div class="flex items-center">
+                            <i data-feather="check-circle" class="text-green-500 mr-2"></i>
+                            <span>Quality Service</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="award" class="text-yellow-500 mr-2"></i>
+                            <span>Certified</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4 max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Contact Us</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Get in Touch</h3>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="text-blue-600 mr-3 mt-1"></i>
+                        <div>
+                            <h4 class="font-medium">Address</h4>
+                            <p class="text-gray-600">123 Business Street, City, Country</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="phone" class="text-blue-600 mr-3 mt-1"></i>
+                        <div>
+                            <h4 class="font-medium">Phone</h4>
+                            <p class="text-gray-600">+1 (234) 567-8900</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="mail" class="text-blue-600 mr-3 mt-1"></i>
+                        <div>
+                            <h4 class="font-medium">Email</h4>
+                            <p class="text-gray-600">contact@yourbusiness.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <h4 class="font-medium mb-3">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-blue-600">
+                            <i data-feather="facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-blue-600">
+                            <i data-feather="instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-blue-600">
+                            <i data-feather="twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-blue-600">
+                            <i data-feather="linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <form class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-gray-700 mb-1">Name</label>
+                        <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 mb-1">Email</label>
+                        <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-gray-700 mb-1">Message</label>
+                        <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                    </div>
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md font-medium transition">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <i data-feather="camera" class="text-blue-400"></i>
+                        <span class="font-bold text-xl">BizSnap</span>
+                    </div>
+                    <p class="text-gray-400 mt-2">Showcasing our business through images</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">FAQ</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 Your Business Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
         
-        <div class="bg-white rounded-xl shadow p-6">
-          <img src="images/service-house.jpg" alt="House Washing" class="w-full h-48 object-cover rounded-md mb-4">
-          <h3 class="text-xl font-semibold mb-2">House Washing</h3>
-          <p class="text-gray-600">Revitalize siding, brick, and stucco with safe, effective washing.</p>
-        </div>
-        
-        <div class="bg-white rounded-xl shadow p-6">
-          <img src="images/service-driveway.jpg" alt="Driveway Cleaning" class="w-full h-48 object-cover rounded-md mb-4">
-          <h3 class="text-xl font-semibold mb-2">Driveway Cleaning</h3>
-          <p class="text-gray-600">Remove stains, dirt, and buildup for a spotless driveway.</p>
-        </div>
-        
-        <div class="bg-white rounded-xl shadow p-6">
-          <img src="images/service-roof.jpg" alt="Roof Cleaning" class="w-full h-48 object-cover rounded-md mb-4">
-          <h3 class="text-xl font-semibold mb-2">Roof Cleaning</h3>
-          <p class="text-gray-600">Protect and extend the life of your roof with expert cleaning.</p>
-        </div>
-        
-        <div class="bg-white rounded-xl shadow p-6">
-          <img src="images/service-fence.jpg" alt="Fence & Deck Cleaning" class="w-full h-48 object-cover rounded-md mb-4">
-          <h3 class="text-xl font-semibold mb-2">Fence & Deck Cleaning</h3>
-          <p class="text-gray-600">Bring back the natural beauty of your wood or composite surfaces.</p>
-        </div>
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
-        <div class="bg-white rounded-xl shadow p-6">
-          <img src="images/service-windows.jpg" alt="Window Cleaning" class="w-full h-48 object-cover rounded-md mb-4">
-          <h3 class="text-xl font-semibold mb-2">Window Cleaning</h3>
-          <p class="text-gray-600">Crystal-clear windows for a brighter, fresher home.</p>
-        </div>
-
-        <div class="bg-white rounded-xl shadow p-6">
-          <img src="images/service-commercial.jpg" alt="Commercial Properties" class="w-full h-48 object-cover rounded-md mb-4">
-          <h3 class="text-xl font-semibold mb-2">Commercial Properties</h3>
-          <p class="text-gray-600">Keep your business looking sharp and welcoming to customers.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Gallery -->
-  <section id="gallery" class="container mx-auto py-16 px-6">
-    <h2 class="text-3xl font-bold mb-10 text-center">Before & After Gallery</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <img src="images/gallery1.jpg" alt="Before and After Example 1" class="w-full h-full object-cover rounded-lg shadow">
-      <img src="images/gallery2.jpg" alt="Before and After Example 2" class="w-full h-full object-cover rounded-lg shadow">
-      <img src="images/gallery3.jpg" alt="Before and After Example 3" class="w-full h-full object-cover rounded-lg shadow">
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section id="testimonials" class="bg-gray-100 py-16 px-6">
-    <div class="container mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-10">What Our Customers Say</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        
-        <div class="bg-white rounded-xl shadow p-6">
-          <img src="images/customer1.jpg" alt="Customer 1" class="w-12 h-12 rounded-full mx-auto mb-4 object-cover">
-          <p class="text-gray-600 mb-2">"PowerWash Bros made my driveway look brand new. Amazing job!"</p>
-          <h4 class="font-semibold">Sarah J.</h4>
-        </div>
-        
-        <div class="bg-white rounded-xl shadow p-6">
-          <img src="images/customer2.jpg" alt="Customer 2" class="w-12 h-12 rounded-full mx-auto mb-4 object-cover">
-          <p class="text-gray-600 mb-2">"Professional, friendly, and thorough. Highly recommend."</p>
-          <h4 class="font-semibold">Michael R.</h4>
-        </div>
-        
-        <div class="bg-white rounded-xl shadow p-6">
-          <img src="images/customer3.jpg" alt="Customer 3" class="w-12 h-12 rounded-full mx-auto mb-4 object-cover">
-          <p class="text-gray-600 mb-2">"They transformed our patio. We’ll definitely hire them again."</p>
-          <h4 class="font-semibold">Jessica T.</h4>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="container mx-auto py-16 px-6 text-center">
-    <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
-    <p class="text-gray-600 mb-6">Serving Keller, TX and surrounding DFW communities.</p>
-    <form class="max-w-lg mx-auto space-y-4">
-      <input type="text" placeholder="Name" class="w-full border border-gray-300 rounded-lg p-3">
-      <input type="email" placeholder="Email" class="w-full border border-gray-300 rounded-lg p-3">
-      <input type="tel" placeholder="Phone" class="w-full border border-gray-300 rounded-lg p-3">
-      <textarea placeholder="Message" class="w-full border border-gray-300 rounded-lg p-3"></textarea>
-      <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 rounded-lg font-semibold w-full">
-        Send Message
-      </button>
-    </form>
-    <div class="mt-6">
-      <p><strong>Email:</strong> clean.powerwashbros@gmail.com</p>
-      <p><strong>Phone:</strong> (817) 408-0108</p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-gray-300 py-6 text-center">
-    <p>&copy; 2025 PowerWash Bros. All rights reserved.</p>
-  </footer>
-
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+    <script>
+        feather.replace();
+    </script>
 </body>
 </html>
